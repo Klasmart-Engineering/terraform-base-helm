@@ -1,14 +1,14 @@
 apiVersion: v1
 entries:
-  workspace:
+  kl-base-terraform:
   - apiVersion: v2
     appVersion: v0.1.0
-    created: "2022-06-10T14:18:36.876262009Z"
-    description: A Helm chart for Kubernetes
-    digest: d36e9f90b9332fdf2488e6af2bc79ae0936602071c9da3c15ef5bedbcbc0e5b0
-    name: workspace
+    created: "2022-06-10T15:57:35.868948335Z"
+    description: A Helm chart for Terraform Workspaces
+    digest: 6a4b451a5a7d35255ec05534818c8c961b7557148f166fda89be18c00c6f2e37
+    name: kl-base-terraform
     type: application
     urls:
     - artifacts/terraform-base-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-10T14:18:36.875749906Z"
+generated: "2022-06-10T15:57:35.868488326Z"
