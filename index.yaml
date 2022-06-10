@@ -3,12 +3,12 @@ entries:
   workspace:
   - apiVersion: v2
     appVersion: v0.1.0
-    created: "2022-06-10T14:52:02.196786+01:00"
+    created: "2022-06-10T15:14:41.158135+01:00"
     description: A Helm chart for Kubernetes
-    digest: 742c78d11224babfde7ba659059545a1ca3d4bcb6df6ae1ba52631996f512246
+    digest: d36e9f90b9332fdf2488e6af2bc79ae0936602071c9da3c15ef5bedbcbc0e5b0
     name: workspace
     type: application
     urls:
     - artifacts/terraform-base-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-10T14:52:02.196428+01:00"
+generated: "2022-06-10T15:14:41.157636+01:00"

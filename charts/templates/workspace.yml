@@ -31,9 +31,19 @@ spec:
       key: CONFIRM_DESTROY
       sensitive: false
       value: "1"
-    {{- range $.Values.provider_config }}
-    - {{ . | toYaml | indent 6 | trim }}
-    {{- end }}
+    - key: region
+      value: {{ $.Values.provider_config.aws_region }}
+      sensitive: false
+      environmentVariable: false
+    - key: aws_target_role_arn
+      sensitive: true
+      environmentVariable: false
+    - key: aws_session_name
+      sensitive: true
+      environmentVariable: false
+    - key: aws_target_external_id
+      sensitive: true
+      environmentVariable: false
     {{- range $.Values.variables }}
     - {{ . | toYaml | indent 6 | trim }}
     {{- end }}

@@ -11,19 +11,6 @@ module:
   source: OVERRIDE_ME
   version: OVERRIDE_ME
 provider_config:
-    - key: region
-      value: OVERRIDE_ME
-      sensitive: false
-      environmentVariable: false
-    - key: aws_target_role_arn
-      sensitive: true
-      environmentVariable: false
-    - key: aws_session_name
-      sensitive: true
-      environmentVariable: false
-    - key: aws_target_external_id
-      sensitive: true
-      environmentVariable: false
-
+    aws_region: OVERRIDE_ME
 variables: []
 outputs: []
