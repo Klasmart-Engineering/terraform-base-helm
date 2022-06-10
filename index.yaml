@@ -3,12 +3,12 @@ entries:
   kl-base-terraform:
   - apiVersion: v2
     appVersion: v0.1.0
-    created: "2022-06-10T15:57:35.868948335Z"
+    created: "2022-06-10T16:11:35.096560453Z"
     description: A Helm chart for Terraform Workspaces
     digest: 6a4b451a5a7d35255ec05534818c8c961b7557148f166fda89be18c00c6f2e37
     name: kl-base-terraform
     type: application
     urls:
-    - artifacts/terraform-base-0.1.0.tgz
+    - artifacts/kl-base-terraform-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-10T15:57:35.868488326Z"
+generated: "2022-06-10T16:11:35.095711543Z"
