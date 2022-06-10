@@ -1,0 +1,29 @@
+# Default values for workspace.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+fullnameOverride: OVERRIDE_ME
+tf_organization: "kidsloop-infrastructure"
+module:
+  tfc_module_based: false
+  git_based: true
+  tfc_ssh_key_id: "TFC GitHub"
+  source: OVERRIDE_ME
+  version: OVERRIDE_ME
+provider_config:
+    - key: region
+      value: OVERRIDE_ME
+      sensitive: false
+      environmentVariable: false
+    - key: aws_target_role_arn
+      sensitive: true
+      environmentVariable: false
+    - key: aws_session_name
+      sensitive: true
+      environmentVariable: false
+    - key: aws_target_external_id
+      sensitive: true
+      environmentVariable: false
+
+variables: []
+outputs: []

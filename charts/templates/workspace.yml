@@ -1,0 +1,39 @@
+{{- $fullName := include "workspace.fullname" . -}}
+apiVersion: app.terraform.io/v1alpha1
+kind: Workspace
+metadata:
+  name: {{ $fullName }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  organization: {{ .Values.tf_organization }}
+  secretsMountPath: "/tmp/secrets"
+  {{- if .Values.module.git_based }}
+  sshKeyID: {{ .Values.module.tfc_ssh_key_id }}
+  {{- end }}
+  module:
+    source: {{ .Values.module.source -}}
+    {{- if .Values.module.git_based -}}
+    ?ref={{ .Values.module.version }}
+    {{- else -}}
+
+    {{- end }}
+    {{- if .Values.module.tfc_module_based }}
+    version: {{ .Values.module.version }}
+    {{- end }}
+  outputs:
+    {{- range $.Values.outputs }}
+    - {{ . | toYaml | indent 6 | trim }}
+    {{- else }}
+      []
+    {{- end }}
+  variables:
+    - environmentVariable: true
+      key: CONFIRM_DESTROY
+      sensitive: false
+      value: "1"
+    {{- range $.Values.provider_config }}
+    - {{ . | toYaml | indent 6 | trim }}
+    {{- end }}
+    {{- range $.Values.variables }}
+    - {{ . | toYaml | indent 6 | trim }}
+    {{- end }}
